@@ -8,7 +8,7 @@ namespace WebComponentModel.Models
         public MainBlock(Browser browser, By selector)
             : base(browser, selector) { }
 
-        public SubBlockA SubA => new(this, By.CssSelector("//suba"));
-        public SubBlockB SubB => new(this, By.CssSelector("//subb"));
+        public BlockA BlockA => new(this, ByCss("//blockA"));
+        public BlockB BlockB => new(this, ByCss("//blockB"));
     }
 }

@@ -13,10 +13,10 @@ namespace WebComponentModel
             var MainBlock = env.Open();
 
             MainBlock
-                .SubA.ReturnToParent<MainBlock>()
-                .SubA.SubB.ReturnToRoot<MainBlock>()
-                .SubB.ReturnToRoot<MainBlock>()
-                .SubB.StayHere()
+                .BlockA.ReturnToParent<MainBlock>()
+                .BlockA.BlockB.ReturnToRoot<MainBlock>()
+                .BlockB.ReturnToRoot<MainBlock>()
+                .BlockB.StayHere()
                 .Assert(x =>
                 {
                     Assert.Equal("ExpectedName", x.Name);

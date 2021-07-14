@@ -3,11 +3,11 @@ using WebComponentModel.Implements;
 
 namespace WebComponentModel.Models
 {
-    public class SubBlockB : WebBlock
+    public class BlockA : WebBlock
     {
-        public SubBlockB(WebBlock webBlockParent, By selector)
+        public BlockA(WebBlock webBlockParent, By selector)
             : base(webBlockParent, selector) { }
 
-        public string Name => Find(ByCss("//name")).Text;
+        public BlockB BlockB => new(this, ByCss("//subb"));
     }
 }
