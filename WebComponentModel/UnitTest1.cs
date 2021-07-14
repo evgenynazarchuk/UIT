@@ -19,6 +19,7 @@ namespace WebComponentModel
                 .SubB.StayHere()
                 .Assert(x =>
                 {
+                    Assert.Equal("ExpectedName", x.Name);
                 });
         }
     }

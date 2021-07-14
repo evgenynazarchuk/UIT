@@ -7,5 +7,7 @@ namespace WebComponentModel.Models
     {
         public SubBlockB(WebBlock webBlockParent, By selector)
             : base(webBlockParent, selector) { }
+
+        public string Name => Find(ByCss("//name")).Text;
     }
 }
