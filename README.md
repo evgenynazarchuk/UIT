@@ -1,1 +1,1 @@
-# Web Component Model for easy UI testing
+# Web Block Model for easy UI testing
