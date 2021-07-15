@@ -37,7 +37,7 @@ namespace WebBlockModel
         /// <param name="url"></param>
         /// <returns></returns>
         public WebBlockType GoToUrl<WebBlockType>(string url)
-            where WebBlockType : WebBlock, new()
+            where WebBlockType : WebBlock
         {
             Driver.Navigate().GoToUrl(url);
             var webBlock = new WebBlock(this);

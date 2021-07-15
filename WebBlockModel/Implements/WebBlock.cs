@@ -57,11 +57,6 @@ namespace WebBlockModel
         /// <summary>
         /// 
         /// </summary>
-        public WebBlock() { }
-
-        /// <summary>
-        /// 
-        /// </summary>
         /// <typeparam name="RootBlock"></typeparam>
         /// <returns></returns>
         public virtual RootBlock ReturnToRootBlock<RootBlock>()
