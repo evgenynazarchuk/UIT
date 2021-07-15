@@ -5,15 +5,15 @@ namespace WebBlockModel
 {
     public class ImplicitAppendText : IAppendText
     {
-        protected DefaultWait<ISearchContext> Context;
+        protected DefaultWait<ISearchContext> ElementWaiter;
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="context"></param>
-        public ImplicitAppendText(DefaultWait<ISearchContext> context)
+        /// <param name="elementWaiter"></param>
+        public ImplicitAppendText(DefaultWait<ISearchContext> elementWaiter)
         {
-            Context = context;
+            ElementWaiter = elementWaiter;
         }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace WebBlockModel
         /// <param name="text"></param>
         public void AppendText(By selector, string text)
         {
-            Context.Until(WaitCondition.AppendText(selector, text));
+            ElementWaiter.Until(WaitCondition.AppendText(selector, text));
         }
     }
 }
