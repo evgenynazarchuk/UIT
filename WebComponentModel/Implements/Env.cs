@@ -1,7 +1,4 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-
-namespace WebComponentModel.Implements
+﻿namespace WebComponentModel
 {
     public class Env
     {

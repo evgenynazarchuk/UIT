@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace WebComponentModel.Implements
+namespace WebComponentModel
 {
-    public static class WebBlockExt
+    public static class WebBlockExtensions
     {
         public static CurrentWebBlock Assert<CurrentWebBlock>(this CurrentWebBlock webBlock,
             Action<CurrentWebBlock> action)

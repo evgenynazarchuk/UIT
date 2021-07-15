@@ -1,4 +1,3 @@
-using WebComponentModel.Implements;
 using WebComponentModel.Models;
 using Xunit;
 

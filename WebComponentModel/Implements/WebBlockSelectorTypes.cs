@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace WebComponentModel.Implements
+namespace WebComponentModel
 {
     public partial class WebBlock
     {

@@ -1,9 +1,8 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
 
-namespace WebComponentModel.Implements
+namespace WebComponentModel
 {
     public partial class WebBlock
     {
@@ -21,11 +20,13 @@ namespace WebComponentModel.Implements
             Selector = selector;
             Parent = this;
             Root = this;
-            SourceElement = Browser.Driver.FindElement(selector);
+            SourceElement = Browser.Waiter.Until(WaitCondition.Find(selector));
             Waiter = new DefaultWait<ISearchContext>(SourceElement)
             {
                 Timeout = TimeSpan.FromSeconds(ExtImplicitWait)
             };
+
+            UseDefaultAction();
         }
 
         public WebBlock(WebBlock webBlockParent, By selector)
@@ -39,81 +40,9 @@ namespace WebComponentModel.Implements
             {
                 Timeout = TimeSpan.FromSeconds(ExtImplicitWait)
             };
+
+            UseDefaultAction();
         }
-
-        protected virtual void Click(By selector)
-        {
-            BeforeTriggerAction();
-
-            AfterTriggerAction();
-        }
-
-        protected virtual void DoubleClick(By selector)
-        {
-            BeforeTriggerAction();
-
-            AfterTriggerAction();
-        }
-
-        protected virtual void RightClick(By selector)
-        {
-            BeforeTriggerAction();
-
-            AfterTriggerAction();
-        }
-
-        protected virtual void Hover(By selector)
-        {
-            BeforeTriggerAction();
-
-            AfterTriggerAction();
-        }
-
-        protected virtual void ClearText(By selector)
-        {
-            BeforeTriggerAction();
-
-            AfterTriggerAction();
-        }
-
-        protected virtual void AppendText(By selector, string text)
-        {
-            BeforeTriggerAction();
-
-            AfterTriggerAction();
-        }
-
-        protected virtual IWebElement Find(By selector)
-        {
-            BeforeTriggerAction();
-
-            return null;
-        }
-
-        protected virtual IReadOnlyCollection<IWebElement> Finds(By selector)
-        {
-            BeforeTriggerAction();
-
-            return null;
-        }
-
-        protected virtual IWebElement FindOrNull(By selector)
-        {
-            Wait();
-            BeforeTriggerAction();
-
-            return null;
-        }
-
-        protected virtual IReadOnlyCollection<IWebElement> FindsOrEmpty(By selector)
-        {
-            Wait();
-            BeforeTriggerAction();
-
-            return null;
-        }
-
-        protected virtual void Wait() { }
 
         public virtual RootBlock ReturnToRoot<RootBlock>()
             where RootBlock : WebBlock
