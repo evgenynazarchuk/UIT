@@ -11,6 +11,10 @@ namespace WebBlockModel
             Element = element;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
         public void ClearText(By selector)
         {
             Element.FindElement(selector).Clear();

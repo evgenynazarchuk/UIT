@@ -12,6 +12,10 @@ namespace WebBlockModel
             Context = context;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
         public void Click(By selector)
         {
             Context.Until(WaitCondition.Click(selector));

@@ -15,7 +15,7 @@ namespace WebBlockModel
                 .BlockA.ReturnToParentBlock<MainBlock>()
                 .BlockA.BlockB.ReturnToRootBlock<MainBlock>()
                 .BlockB.ReturnToRootBlock<MainBlock>()
-                .BlockB.StayHere()
+                .BlockB.SetCurrentBlock()
                 .Assert(x =>
                 {
                     Assert.Equal("ExpectedName", x.Name);

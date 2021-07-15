@@ -12,6 +12,10 @@ namespace WebBlockModel
             Context = context;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
         public void ClearText(By selector)
         {
             Context.Until(WaitCondition.ClearText(selector));

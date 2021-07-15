@@ -6,6 +6,11 @@ namespace WebBlockModel
 {
     public static class WaitCondition
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         public static Func<ISearchContext, bool> Click(By selector)
         {
             bool condition(ISearchContext context)
@@ -24,6 +29,11 @@ namespace WebBlockModel
             return condition;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         public static Func<ISearchContext, bool> ClearText(By selector)
         {
             bool condition(ISearchContext context)
@@ -42,6 +52,12 @@ namespace WebBlockModel
             return condition;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <param name="text"></param>
+        /// <returns></returns>
         public static Func<ISearchContext, bool> AppendText(By selector, string text)
         {
             bool condition(ISearchContext context)
@@ -60,6 +76,11 @@ namespace WebBlockModel
             return condition;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         public static Func<ISearchContext, bool> IsDisplayed(By selector)
         {
             bool condition(ISearchContext context)
@@ -81,6 +102,11 @@ namespace WebBlockModel
             return condition;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         public static Func<ISearchContext, bool> IsNotDisplayed(By selector)
         {
             bool condition(ISearchContext context)
@@ -102,6 +128,11 @@ namespace WebBlockModel
             return condition;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         public static Func<ISearchContext, IWebElement> Find(By selector)
         {
             IWebElement condition(ISearchContext context)
@@ -123,6 +154,11 @@ namespace WebBlockModel
             return condition;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         public static Func<ISearchContext, IReadOnlyCollection<IWebElement>> Finds(By selector)
         {
             IReadOnlyCollection<IWebElement> condition(ISearchContext context)

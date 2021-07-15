@@ -5,18 +5,33 @@ namespace WebBlockModel
 {
     public partial class WebBlock
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         protected virtual IWebElement Find(By selector)
         {
             Wait();
             return Waiter.Until(WaitCondition.Find(selector));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         protected virtual IReadOnlyCollection<IWebElement> Finds(By selector)
         {
             Wait();
             return Waiter.Until(WaitCondition.Finds(selector));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         protected virtual IWebElement FindOrNull(By selector)
         {
             Wait();
@@ -34,6 +49,11 @@ namespace WebBlockModel
             return element;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selector"></param>
+        /// <returns></returns>
         protected virtual IReadOnlyCollection<IWebElement> FindsOrEmpty(By selector)
         {
             Wait();

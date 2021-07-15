@@ -9,7 +9,7 @@ namespace WebBlockModel.Models
         {
             var driver = new ChromeDriver();
             var browser = new Browser(driver);
-            return new MainBlock(browser, By.XPath("//html"));
+            return browser.GoToUrl<MainBlock>("http://");
         }
     }
 }

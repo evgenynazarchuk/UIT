@@ -6,6 +6,10 @@ namespace WebBlockModel
 {
     public partial class WebBlock
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         protected virtual Bitmap TakePageScreenshot()
         {
             Wait();
@@ -15,6 +19,10 @@ namespace WebBlockModel
             return image;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         protected virtual Bitmap TakeWebBlockScreenshot()
         {
             Wait();
@@ -25,6 +33,11 @@ namespace WebBlockModel
             return imageBlock;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="image"></param>
+        /// <returns></returns>
         public static byte[] ImageToByte(Bitmap image)
         {
             using var stream = new MemoryStream();
@@ -32,11 +45,20 @@ namespace WebBlockModel
             return stream.ToArray();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="filepath"></param>
+        /// <param name="image"></param>
         public virtual void SaveImageToDisk(string filepath, Bitmap image)
         {
             image.Save(filepath, System.Drawing.Imaging.ImageFormat.Png);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="url"></param>
         public virtual void SendImageToWeb(string url) { }
     }
 }

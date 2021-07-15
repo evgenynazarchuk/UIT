@@ -14,10 +14,15 @@ namespace WebBlockModel
         protected readonly DefaultWait<ISearchContext> Waiter;
         protected readonly int ImplicitActionTime = 60;
 
-        public WebBlock(Browser browser, By selector)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="browser"></param>
+        /// <param name="selector"></param>
+        public WebBlock(Browser browser, By selector = null)
         {
             Browser = browser;
-            Selector = selector;
+            Selector = selector ?? ByXPath("//html");
             ParentBlock = this;
             RootBlock = this;
             SourceElement = Browser.Waiter.Until(WaitCondition.Find(selector));
@@ -29,6 +34,11 @@ namespace WebBlockModel
             UseDefaultAction();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="parentWebBlock"></param>
+        /// <param name="selector"></param>
         public WebBlock(WebBlock parentWebBlock, By selector)
         {
             Browser = parentWebBlock.Browser;
@@ -44,10 +54,25 @@ namespace WebBlockModel
             UseDefaultAction();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public WebBlock() { }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="RootBlock"></typeparam>
+        /// <returns></returns>
         public virtual RootBlock ReturnToRootBlock<RootBlock>()
             where RootBlock : WebBlock
             => this.RootBlock as RootBlock;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="ParentBlock"></typeparam>
+        /// <returns></returns>
         public virtual ParentBlock ReturnToParentBlock<ParentBlock>()
             where ParentBlock : WebBlock
             => this.ParentBlock as ParentBlock;

@@ -4,6 +4,13 @@ namespace WebBlockModel
 {
     public static class WebBlockExtensions
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="CurrentWebBlock"></typeparam>
+        /// <param name="webBlock"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
         public static CurrentWebBlock Assert<CurrentWebBlock>(this CurrentWebBlock webBlock,
             Action<CurrentWebBlock> action)
             where CurrentWebBlock : WebBlock
@@ -12,7 +19,13 @@ namespace WebBlockModel
             return webBlock;
         }
 
-        public static CurrentWebBlock StayHere<CurrentWebBlock>(this CurrentWebBlock webBlock)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="CurrentWebBlock"></typeparam>
+        /// <param name="webBlock"></param>
+        /// <returns></returns>
+        public static CurrentWebBlock SetCurrentBlock<CurrentWebBlock>(this CurrentWebBlock webBlock)
             where CurrentWebBlock : WebBlock
         {
             return webBlock;
