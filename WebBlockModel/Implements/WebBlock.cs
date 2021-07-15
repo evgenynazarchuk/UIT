@@ -2,7 +2,7 @@
 using OpenQA.Selenium.Support.UI;
 using System;
 
-namespace WebComponentModel
+namespace WebBlockModel
 {
     public partial class WebBlock
     {

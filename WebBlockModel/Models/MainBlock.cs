@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace WebComponentModel.Models
+namespace WebBlockModel.Models
 {
     public class MainBlock : WebBlock
     {

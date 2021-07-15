@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 
-namespace WebComponentModel
+namespace WebBlockModel
 {
     public partial class WebBlock
     {

@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace WebComponentModel
+namespace WebBlockModel
 {
     public interface IClearText
     {

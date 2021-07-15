@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.IO;
 
-namespace WebComponentModel
+namespace WebBlockModel
 {
     public partial class WebBlock
     {

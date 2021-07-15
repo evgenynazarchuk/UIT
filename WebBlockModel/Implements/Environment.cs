@@ -1,4 +1,4 @@
-﻿namespace WebComponentModel
+﻿namespace WebBlockModel
 {
     public class Environment
     {

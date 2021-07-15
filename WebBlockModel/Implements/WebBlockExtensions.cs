@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WebComponentModel
+namespace WebBlockModel
 {
     public static class WebBlockExtensions
     {

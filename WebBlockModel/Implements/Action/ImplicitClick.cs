@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace WebComponentModel
+namespace WebBlockModel
 {
     public class ImplicitClick : IClick
     {

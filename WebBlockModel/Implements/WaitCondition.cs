@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace WebComponentModel
+namespace WebBlockModel
 {
     public static class WaitCondition
     {

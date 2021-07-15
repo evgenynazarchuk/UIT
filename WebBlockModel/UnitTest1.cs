@@ -1,7 +1,7 @@
-using WebComponentModel.Models;
+using WebBlockModel.Models;
 using Xunit;
 
-namespace WebComponentModel
+namespace WebBlockModel
 {
     public class UnitTest1
     {

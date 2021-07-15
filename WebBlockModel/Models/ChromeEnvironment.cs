@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace WebComponentModel.Models
+namespace WebBlockModel.Models
 {
     public class ChromeEnvironment : Environment
     {
