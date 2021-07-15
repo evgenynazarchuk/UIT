@@ -3,7 +3,7 @@ using OpenQA.Selenium.Chrome;
 
 namespace WebComponentModel.Models
 {
-    public class DesktopEnv : Env
+    public class ChromeEnvironment : Environment
     {
         public override MainBlock Open()
         {

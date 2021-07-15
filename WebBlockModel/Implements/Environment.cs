@@ -1,6 +1,6 @@
 ﻿namespace WebComponentModel
 {
-    public class Env
+    public class Environment
     {
         public virtual WebBlock Open()
         {

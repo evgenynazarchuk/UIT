@@ -10,7 +10,7 @@ namespace WebComponentModel
         {
             IJavaScriptExecutor js = Browser.Driver as IJavaScriptExecutor;
 
-            Root.Waiter.Until(driver =>
+            RootBlock.Waiter.Until(driver =>
             {
                 return (bool)js.ExecuteScript("return getAllAngularTestabilities().findIndex(x=>!x.isStable()) === -1");
             });

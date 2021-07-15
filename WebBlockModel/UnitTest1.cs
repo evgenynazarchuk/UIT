@@ -8,13 +8,13 @@ namespace WebComponentModel
         [Fact]
         public void Test1()
         {
-            var env = new DesktopEnv();
+            var env = new ChromeEnvironment();
             var MainBlock = env.Open();
 
             MainBlock
-                .BlockA.ReturnToParent<MainBlock>()
-                .BlockA.BlockB.ReturnToRoot<MainBlock>()
-                .BlockB.ReturnToRoot<MainBlock>()
+                .BlockA.ReturnToParentBlock<MainBlock>()
+                .BlockA.BlockB.ReturnToRootBlock<MainBlock>()
+                .BlockB.ReturnToRootBlock<MainBlock>()
                 .BlockB.StayHere()
                 .Assert(x =>
                 {

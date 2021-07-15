@@ -8,48 +8,48 @@ namespace WebComponentModel
     {
         protected readonly Browser Browser;
         protected readonly By Selector;
-        protected readonly WebBlock Parent;
-        protected readonly WebBlock Root;
+        protected readonly WebBlock ParentBlock;
+        protected readonly WebBlock RootBlock;
         protected readonly IWebElement SourceElement;
         protected readonly DefaultWait<ISearchContext> Waiter;
-        protected readonly int ExtImplicitWait = 60;
+        protected readonly int ImplicitActionTime = 60;
 
         public WebBlock(Browser browser, By selector)
         {
             Browser = browser;
             Selector = selector;
-            Parent = this;
-            Root = this;
+            ParentBlock = this;
+            RootBlock = this;
             SourceElement = Browser.Waiter.Until(WaitCondition.Find(selector));
             Waiter = new DefaultWait<ISearchContext>(SourceElement)
             {
-                Timeout = TimeSpan.FromSeconds(ExtImplicitWait)
+                Timeout = TimeSpan.FromSeconds(ImplicitActionTime)
             };
 
             UseDefaultAction();
         }
 
-        public WebBlock(WebBlock webBlockParent, By selector)
+        public WebBlock(WebBlock parentWebBlock, By selector)
         {
-            Browser = webBlockParent.Browser;
+            Browser = parentWebBlock.Browser;
             Selector = selector;
-            Parent = webBlockParent;
-            Root = Parent.Root;
-            SourceElement = Parent.Find(selector);
+            ParentBlock = parentWebBlock;
+            RootBlock = ParentBlock.RootBlock;
+            SourceElement = ParentBlock.Find(selector);
             Waiter = new DefaultWait<ISearchContext>(SourceElement)
             {
-                Timeout = TimeSpan.FromSeconds(ExtImplicitWait)
+                Timeout = TimeSpan.FromSeconds(ImplicitActionTime)
             };
 
             UseDefaultAction();
         }
 
-        public virtual RootBlock ReturnToRoot<RootBlock>()
+        public virtual RootBlock ReturnToRootBlock<RootBlock>()
             where RootBlock : WebBlock
-            => Root as RootBlock;
+            => this.RootBlock as RootBlock;
 
-        public virtual ParentBlock ReturnToParent<ParentBlock>()
+        public virtual ParentBlock ReturnToParentBlock<ParentBlock>()
             where ParentBlock : WebBlock
-            => Parent as ParentBlock;
+            => this.ParentBlock as ParentBlock;
     }
 }
