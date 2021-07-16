@@ -19,13 +19,13 @@ namespace WebBlockModel
         /// </summary>
         /// <param name="browser"></param>
         /// <param name="selector"></param>
-        public WebBlock(Browser browser, By selector = null)
+        public WebBlock(Browser browser)
         {
             Browser = browser;
-            Selector = selector ?? ByXPath("//html");
+            Selector = ByXPath("//html");
             ParentBlock = this;
             RootBlock = this;
-            SourceElement = Browser.Waiter.Until(WaitCondition.Find(selector));
+            SourceElement = Browser.Waiter.Until(WaitCondition.Find(Selector));
             Waiter = new DefaultWait<ISearchContext>(SourceElement)
             {
                 Timeout = TimeSpan.FromSeconds(ImplicitActionTime)

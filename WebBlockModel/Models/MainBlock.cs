@@ -1,11 +1,9 @@
-﻿using OpenQA.Selenium;
-
-namespace WebBlockModel.Models
+﻿namespace WebBlockModel.Models
 {
     public class MainBlock : WebBlock
     {
-        public MainBlock(Browser browser, By selector)
-            : base(browser, selector) { }
+        public MainBlock(Browser browser)
+            : base(browser) { }
 
         public BlockA BlockA => new(this, ByCss("//blockA"));
         public BlockB BlockB => new(this, ByCss("//blockB"));
