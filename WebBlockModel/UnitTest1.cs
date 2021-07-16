@@ -13,7 +13,7 @@ namespace WebBlockModel
 
             MainBlock
                 .BlockA.ReturnToParentBlock<MainBlock>()
-                .BlockA.BlockB.ReturnToRootBlock<MainBlock>()
+                .BlockA.BlockB.ReturnToRootBlock<BlockA>()
                 .BlockB.ReturnToRootBlock<MainBlock>()
                 .BlockB.SetCurrentBlock()
                 .Assert(x =>
