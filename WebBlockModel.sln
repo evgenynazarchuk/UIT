@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBlockModel", "WebBlockModel\WebBlockModel.csproj", "{D9E986F5-2019-4B08-9DDE-1746130EB3D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebBlockModel", "WebBlockModel\WebBlockModel.csproj", "{D9E986F5-2019-4B08-9DDE-1746130EB3D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScreenshotVerificationServer", "ScreenshotVerificationServer", "{2AFADAEC-5ED8-4360-AAC6-AC37FEAE9F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenshotVerificationServer", "ScreenshotVerificationServer\ScreenshotVerificationServer.csproj", "{500B670E-F2B3-4781-B38E-3D48B3EC5005}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{D9E986F5-2019-4B08-9DDE-1746130EB3D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9E986F5-2019-4B08-9DDE-1746130EB3D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9E986F5-2019-4B08-9DDE-1746130EB3D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{500B670E-F2B3-4781-B38E-3D48B3EC5005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500B670E-F2B3-4781-B38E-3D48B3EC5005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500B670E-F2B3-4781-B38E-3D48B3EC5005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500B670E-F2B3-4781-B38E-3D48B3EC5005}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{500B670E-F2B3-4781-B38E-3D48B3EC5005} = {2AFADAEC-5ED8-4360-AAC6-AC37FEAE9F18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F5E844C-008C-4A30-925C-F5B5F3DC3B9A}
