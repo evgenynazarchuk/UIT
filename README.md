@@ -1,1 +1,1 @@
-# Web Page Model for UI testing
+# UIT for Page Object Model
