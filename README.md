@@ -1,1 +1,1 @@
-# Web Block Model for easy UI testing
+# Web Page Model for UI testing
